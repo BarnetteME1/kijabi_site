@@ -15,12 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import include,url
 from django.contrib import admin
-from kijabiapp import index
+from kijabiapp.views import index
 
 urlpatterns = [
+    url(r'^$',index,name='index'),
     url(r'^admin/', admin.site.urls),
-]
-
-urlpatterns = [
-    url(r'^$',index,name='index')
 ]
