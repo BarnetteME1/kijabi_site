@@ -1,6 +1,9 @@
 from django.shortcuts import render, render_to_response
 # Create your views here.
 
+def base(request):
+    return render_to_response(template_name="base.html")
+
 def data_input(request):
     return render_to_response(template_name="data-input.html")
 

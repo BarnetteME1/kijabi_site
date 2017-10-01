@@ -1,20 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
   <title>Kijabi Infectious Disease Data Input</title>
-  <link rel='stylesheet' href='static/styles.css'/>
+  <link rel='stylesheet' type='text/css' href='static/styles.css'/>
 </head>
 <body>
   <div class='header'>
     <ul class='menu'>
       <li class='dropdown'><span>Pages &#9662;<span>
         <ul class='pages-menu'>
-          <li><a href='data-input.html'>Data Input Page</a></li>
-          <li><a href='query.html'>Query Page</a></li>
-          <li><a href='analytics.html'>Analytics page</a></li>
+          <li><a href='data-input'>Data Input Page</a></li>
+          <li><a href='query'>Query Page</a></li>
+          <li><a href='analytics'>Analytics page</a></li>
         </ul>
       </li>
     </ul>
 </body>
 <html>
+{% block content %}
+{% endblock %}
