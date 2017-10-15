@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/bacteria_type/" method=post>
+  <label for="bacteria_type">bacteria_type: <label>
+  <input id="bacteria_type" type="text" name="bacteria_type">
+  <input type="submit" value="ok">
+</form>
+{% endblock %}

@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include,url
 from django.contrib import admin
-from kijabiapp.views import data_input, query, analytics, base
+from kijabiapp.views import UserCreateView, DataView, QueryView, AnalyticsView
 
 urlpatterns = [
-    url(r'^$',base,name='base'),
-    url(r'^data/',data_input,name='main'),
-    url(r'^query/',query,name='query'),
-    url(r'^analytics/',analytics,name='analytics'),
+    url(r'^$',UserCreateView.as_view(),name='user_create'),
+    url(r'^data/',DataView.as_view(),name='main'),
+    url(r'^query/',QueryView.as_view(),name='query'),
+    url(r'^analytics/',AnalyticsView.as_view(),name='analytics'),
     url(r'^admin/', admin.site.urls),
 ]

@@ -95,3 +95,8 @@ a:hover {
   position: relative;
   cursor: pointer;
 }
+
+.login {
+  display: flex;
+  justify-content: center;
+}
