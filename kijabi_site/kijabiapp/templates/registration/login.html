@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>Kijabi Infectious Disease Login</title>
+  <title>Login</title>
   <link rel='stylesheet' type='text/css' href="static/styles.css"/>
 </head>
 <body>
-  <div class='login'>
     <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Create"/>
+    {% csrf_token %}
+    {{ form.as_p }}
+        <button type = 'submit' value='login'>Login</button>
     </form>
-  </div>
 </body>
 </html>

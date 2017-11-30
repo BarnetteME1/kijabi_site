@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import include,url
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 from kijabiapp.views import UserCreateView, DataView, QueryView, AnalyticsView
+from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
-    url(r'^$',UserCreateView.as_view(),name='user_create'),
+    url(r'^login/$',auth_views.login,name='login'),
+    url(r'^logout/$',auth_views.logout,name='logout'),
+    url(r'^create-account',UserCreateView.as_view(),name='user_create'),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^data/',DataView.as_view(),name='main'),
     url(r'^query/',QueryView.as_view(),name='query'),
     url(r'^analytics/',AnalyticsView.as_view(),name='analytics'),

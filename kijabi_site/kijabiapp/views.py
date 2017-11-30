@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, render_to_response
-
+from django.contrib.auth import forms, login
 from django.views.generic import CreateView, UpdateView, View, TemplateView
 from kijabiapp.models import Profile
 # Create your views here.
@@ -11,7 +11,7 @@ from kijabiapp.models import Profile
 class UserCreateView(CreateView):
     model = User
     form_class = UserCreationForm
-    success_url = '/accounts/login'
+    success_url = '/registration/login'
 
 class DataView(TemplateView):
     model = Profile
